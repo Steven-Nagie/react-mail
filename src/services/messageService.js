@@ -3,13 +3,15 @@ export function getMessages() {
 }
 
 export function findMessageById( id ) {
-	for ( let i = 0; i < messages.length; i++ ) {
-		if ( messages[ i ]._id === id ) {
-			return messages[ i ]
+	let returnMessage = {name: 'name'};
+	console.log(id);
+	for (let i = 0; i < messages.length; i++) {
+		if (messages[i]._id === id) {
+			return returnMessage = messages[i];
 		}
 	}
 
-	return {};
+	return returnMessage;
 }
 
 const messages = [
